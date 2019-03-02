@@ -1,0 +1,21 @@
+
+
+.frame{
+  position:absolute;
+  left:10%;
+  right:10%;
+  top:50%;
+  height:800px;
+  width:80%;
+  z-index: 1;
+}
+
+.frame_tsunami{
+  position:absolute;
+  left:10%;
+  right:10%;
+  top:200%;
+  height:800px;
+  width:80%;
+  z-index: 1;
+}

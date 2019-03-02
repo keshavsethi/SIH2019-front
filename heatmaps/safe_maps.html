@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>safe_map</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+<!--  css starts here-->
+
+  <style>
+  html, body, #map-canvas {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+  </style>
+
+<!--  css ends here-->
+
+
+
+
+
+
+
+<!--map related js -->
+
+
+<script>
+// https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false
+// //code.jquery.com/jquery-1.11.0.min.js
+
+var map;
+
+// The JSON data
+// var json = [{"id":48,"title":"Helgelandskysten","longitude":"12.63376","latitude":"66.02219"},{"id":46,"title":"Tysfjord","longitude":"16.50279","latitude":"68.03515"},{"id":44,"title":"Sledehunds-ekspedisjon","longitude":"7.53744","latitude":"60.08929"},{"id":43,"title":"Amundsens sydpolferd","longitude":"11.38411","latitude":"62.57481"},{"id":39,"title":"Vikingtokt","longitude":"6.96781","latitude":"60.96335"},{"id":6,"title":"Tungtvann- sabotasjen","longitude":"8.49139","latitude":"59.87111"}];
+
+
+
+var json;
+var json_clone;
+
+window.onload = function() {
+
+	var url = 	'http://139.59.85.163/main/get_location/';
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+		if ( this.readyState == 4 && this.status == 200 ) {
+			var json = JSON.parse(xhttp.responseText).location;
+
+			// console.log(json);
+      // console.log(json.length);
+      // console.log(json[1].lat);
+      // var json_clone = JSON.parse(JSON.stringify(json));
+      initialize(json);
+console.log(json);
+}}
+
+xhttp.open("GET", url, true);
+xhttp.send({'request': "authentication token"});
+}
+
+
+function initialize(json) {
+
+  // Giving the map som options
+  var mapOptions = {
+    zoom: 2,
+    center: new google.maps.LatLng(json[0].lat,json[0].long)
+  };
+
+  // Creating the map
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+
+  // Looping through all the entries from the JSON data
+  for(var i = 0; i < json.length; i++) {
+
+    // Current object
+    var obj = json[i];
+     if(obj.is_safe == true){
+    // Adding a new marker for the object
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(obj.lat,obj.long),
+      map: map,
+      name: obj.name // this works, giving the marker a title with the correct title
+    });
+
+
+    // Adding a new info window for the object
+    var clicker = addClicker(marker, obj.name);
+
+
+
+
+
+  } // end loop
+}
+
+  // Adding a new click event listener for the object
+  function addClicker(marker, content) {
+          google.maps.event.addListener(marker, 'click', function() {
+
+            if (infowindow) {infowindow.close();}
+            infowindow = new google.maps.InfoWindow({content: content});
+            infowindow.open(map, marker);
+
+          });
+
+        }
+
+
+
+
+
+// Initialize the map
+google.maps.event.addDomListener(window, 'load', initialize);
+}
+</script>
+
+<!-- js ends   -->
+
+
+
+
+<!--  map_main-->
+<body>
+
+  <div id="map-canvas"></div>
+
+
+  <!-- external js  -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDaHSU38gac_8IGrMeKTlaaQmfexIXS4Bw&callback=initMap'></script>
+<!--  external js -->
+
+
+
+</body>
+<!-- map_main -->
+
+
+</html>

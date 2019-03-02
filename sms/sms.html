@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sending SMS</title>
+
+  <!-- meta stags-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- meta tags -->
+
+
+  <!-- css  -->
+  <link rel='stylesheet' href='https://code.getmdl.io/1.3.0/material.indigo-pink.min.css'>
+  <!-- css -->
+
+  <link rel="stylesheet" href="/home/keshav/Desktop/alertify/sms/sms.css">
+
+
+
+
+</head>
+
+<body>
+
+  <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+  <div class="demo-ribbon"></div>
+  <main class="demo-main mdl-layout__content">
+    <div class="demo-container mdl-grid">
+      <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+      <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--10-col">
+        <h5>SMS</h5>
+
+        <!-- form starts  -->
+        <form class="sendSMS" autocomplete="on">
+
+
+          <!-- phone  numbers -->
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type='text'  id="phone_number" data-required="true">
+            <label class="mdl-textfield__label" for="sample3">Not required if you are uploading excel</label>
+          </div>
+          <!-- phone numbers  -->
+
+
+
+         <!-- sms body-->
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+            <textarea class="mdl-textfield__input" type="text" rows="10" id="sms_body" data-required="true"></textarea>
+            <label class="mdl-textfield__label" for="sample5">SMS Body</label>
+          </div>
+          <!-- sms body -->
+
+
+          <!-- buttons-->
+          <div >
+            <button onclick="smsfunc()" style="background-color: #3baddc;" type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Send</button>
+            <div class="mdl-spinner mdl-js-spinner is-active"></div>
+            <span class="success-help">Your message has been sent!</span>
+          </div>
+          <!--buttons-->
+
+
+            <!--file upload-->
+            <div class="file_input_div">
+     <div class="file_input">
+       <label class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
+         <i class="material-icons">file_upload</i>
+         <input id="file_input_file" id="file_upload" class="none" type="file" />
+       </label>
+     </div>
+     <div id="file_input_text_div" class="mdl-textfield mdl-js-textfield textfield-demo">
+       <input class="file_input_text mdl-textfield__input" type="text" disabled readonly id="file_input_text" />
+       <label class="mdl-textfield__label" for="file_input_text" style="color:black;"></label>
+     </div>
+   </div>
+        <!--file upload-->
+
+        </form>
+        <!-- form ends -->
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+<!--scripts-->
+<script src='https://code.getmdl.io/1.3.0/material.min.js'></script>
+<script  src="/home/keshav/Desktop/alertify/sms/sms.js"></script>
+<!-- scripts-->
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+.footer {
+   position: relative;
+   top:50px;
+   bottom: 16vh;
+   height: 28vh;
+   padding-top: 6vh;
+   padding-left: 10vw;
+   margin-left:0px;
+   padding-bottom: 8vh;
+   line-height: 2.3em;
+   width: 90%;
+   background-color: #2D4150;
+   color: #C4C7D3;
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+   text-transform: uppercase;
+   text-align: left;
+   font-size: 16px;
+}
+.a, td:hover{
+      text-decoration-line: underline;
+      cursor: pointer;
+
+}
+/*
+.footer-logo {
+
+    padding-left: 50vw;
+
+}
+*/
+.bottom-footer {
+   position: absolute;
+   height: 7vh;
+   padding-top: 1vh;
+   padding-left: 15vw;
+   right: 0px;
+   top:230px;
+   bottom: 0;
+   width: 100%;
+   background-color: white;
+   color :rgba(0,0,0,.54);
+   text-align: center;
+}
