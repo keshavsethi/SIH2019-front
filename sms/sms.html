@@ -9,6 +9,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- meta tags -->
 
+  <!-- css header -->
+  <link rel="stylesheet" href="/home/keshav/Desktop/alertify/assets/header.css">
+  <!-- css header -->
 
   <!-- css  -->
   <link rel='stylesheet' href='https://code.getmdl.io/1.3.0/material.indigo-pink.min.css'>
@@ -17,80 +20,162 @@
   <link rel="stylesheet" href="/home/keshav/Desktop/alertify/sms/sms.css">
 
 
-
-
 </head>
 
 <body>
 
-  <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
-  <div class="demo-ribbon"></div>
-  <main class="demo-main mdl-layout__content">
-    <div class="demo-container mdl-grid">
-      <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-      <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--10-col">
-        <h5>SMS</h5>
+<!-- nav bar-->
+<div id="extra">
+  <ul id="navbar1" class="navbar">
+	<li id="home" class="btn img border-right">
+		<a href="/home/keshav/Desktop/alertify/home/home.html">
+			<span class="img">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+					<path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 16 2.59375 L 15.28125 3.28125 L 2.28125 16.28125 L 3.71875 17.71875 L 5 16.4375 L 5 27 L 5 28 L 6 28 L 13 28 L 14 28 L 14 27 L 14 18 L 18 18 L 18 27 L 18 28 L 19 28 L 26 28 L 27 28 L 27 27 L 27 16.4375 L 28.28125 17.71875 L 29.71875 16.28125 L 16.71875 3.28125 L 16 2.59375 z M 16 5.4375 L 25 14.4375 L 25 26 L 20 26 L 20 17 L 20 16 L 19 16 L 13 16 L 12 16 L 12 17 L 12 26 L 7 26 L 7 14.4375 L 16 5.4375 z" color="#000" overflow="visible" font-family="Bitstream Vera Sans"/>
+				</svg>
+			</span>
+			<div class="arrow"></div>
+		</a>
+	</li>
+	<li id="btn1" class="btn text border-right">
+		<a href="/home/keshav/Desktop/alertify/prediction_data/data.html">
+			<span class="title">DATA</span>
+			<div class="arrow"></div>
+		</a>
+	</li>
+	<li id="btn2" class="btn text border-right">
+		<a href="/home/keshav/Desktop/alertify/news/news.html">
+			<span class="title">NEWS</span>
+			<div class="arrow"></div>
+		</a>
+	</li>
+	<li id="btn3" class="btn text border-right">
+		<a href="/home/keshav/Desktop/alertify/sms/sms.html">
+			<span class="title">SMS</span>
+			<div class="arrow"></div>
+		</a>
+	</li>
+	<li id="btn4" class="btn text border-right">
+		<a href="/home/keshav/Desktop/alertify/unsafe/unsafe.html">
+			<span class="title">UNSAFE</span>
+			<div class="arrow"></div>
+		</a>
+	</li>
+	<li id="btn5" class="btn text">
+		<a href="/home/keshav/Desktop/alertify/food/food.html">
+			<span class="title">FOODS</span>
+			<div class="arrow"></div>
+		</a>
+	</li>
+</ul>
+</div>
 
-        <!-- form starts  -->
-        <form class="sendSMS" autocomplete="on">
+<!-- navbar -->
 
 
-          <!-- phone  numbers -->
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type='text'  id="phone_number" data-required="true">
-            <label class="mdl-textfield__label" for="sample3">Not required if you are uploading excel</label>
-          </div>
-          <!-- phone numbers  -->
+  <div id="sms">
+
+    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+    <div class="demo-ribbon"></div>
+    <main class="demo-main mdl-layout__content">
+      <div class="demo-container mdl-grid">
+        <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+        <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--10-col">
+          <h5>SMS</h5>
+
+          <!-- form starts  -->
+          <form class="sendSMS" autocomplete="on">
+
+
+            <!-- phone  numbers -->
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type='text'  id="phone_number" data-required="true">
+              <label class="mdl-textfield__label" for="sample3">Not required if you are uploading excel</label>
+            </div>
+            <!-- phone numbers  -->
 
 
 
-         <!-- sms body-->
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-            <textarea class="mdl-textfield__input" type="text" rows="10" id="sms_body" data-required="true"></textarea>
-            <label class="mdl-textfield__label" for="sample5">SMS Body</label>
-          </div>
-          <!-- sms body -->
+           <!-- sms body-->
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+              <textarea class="mdl-textfield__input" type="text" rows="10" id="sms_body" data-required="true"></textarea>
+              <label class="mdl-textfield__label" for="sample5">SMS Body</label>
+            </div>
+            <!-- sms body -->
 
 
-          <!-- buttons-->
-          <div >
-            <button onclick="smsfunc()" style="background-color: #3baddc;" type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Send</button>
-            <div class="mdl-spinner mdl-js-spinner is-active"></div>
-            <span class="success-help">Your message has been sent!</span>
-          </div>
-          <!--buttons-->
+            <!-- buttons-->
+            <div >
+              <button onclick="smsfunc()" style="background-color: #3baddc;" type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Send</button>
+              <div class="mdl-spinner mdl-js-spinner is-active"></div>
+              <span class="success-help">Your message has been sent!</span>
+            </div>
+            <!--buttons-->
 
 
-            <!--file upload-->
-            <div class="file_input_div">
-     <div class="file_input">
-       <label class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
-         <i class="material-icons">file_upload</i>
-         <input id="file_input_file" id="file_upload" class="none" type="file" />
-       </label>
-     </div>
-     <div id="file_input_text_div" class="mdl-textfield mdl-js-textfield textfield-demo">
-       <input class="file_input_text mdl-textfield__input" type="text" disabled readonly id="file_input_text" />
-       <label class="mdl-textfield__label" for="file_input_text" style="color:black;"></label>
-     </div>
-   </div>
-        <!--file upload-->
+
 
         </form>
         <!-- form ends -->
+
+        <!--file upload-->
+
+        <form action="http://139.59.85.163/main/upload_csv/" method="POST" enctype="multipart/form-data">
+
+          <p style="color:grey; position: relative; top:10px;"> only upload CSVfiles. (i.e. *.csv)</p>
+               <input type="file" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield__input" name="csv_file">
+
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="height:40px; background-color:rgb(63,81,181);" >Upload</button>
+        </form>
+       <!--file upload-->
 
       </div>
     </div>
   </main>
 </div>
 
+</div>
 
 
 <!--scripts-->
 <script src='https://code.getmdl.io/1.3.0/material.min.js'></script>
-<script  src="/home/keshav/Desktop/alertify/sms/sms.js"></script>
-<!-- scripts-->
+<!--
+<script  src="/home/keshav/Desktop/alertify/sms/sms.js"></script> -->
 
+<!-- scripts-->
+<script>
+
+console.log("working2");
+function smsfunc(){
+// var phone = "hey";
+// console.log(phone);
+phone = document.getElementById("phone_number").value;
+console.log(phone);
+
+
+// var sms="nothey";
+// console.log(sms);
+sms = document.getElementById("sms_body").value;
+console.log(sms);
+// var file = document.getElementById('file_upload').value;
+fetch("http://139.59.85.163/main/send_sms/", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "X-USER-ID": "9eeb9069-dd2f-4d46-9b15-1703280f9dbb"
+  },
+  body: JSON.stringify({
+    "phone":phone,
+    "sms-body":sms
+
+  }) // body data type must match "Content-Type" header
+})
+  .then(response => response.json())
+  .then(response => console.log('Success:', JSON.stringify(response)))
+.catch(error => console.error('Error:', error));
+// console.log(sms);
+}
+</script>
 
 
 

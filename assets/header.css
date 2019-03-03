@@ -10,14 +10,13 @@
 
 #extra{
   top:0px;
-
-  background-color:white;
-    position: fixed;
-    z-index: 1000;
-    height: 50px;
-    width: 100%;
-    left: -2px;
-    margin-right: auto;
+  background-color:#4E4D4D;
+  position: fixed;
+  z-index: 1000;
+  height: 50px;
+  width: 100%;
+  left: -2px;
+  margin-right: auto;
 }
 
 ul#navbar1.navbar {

@@ -1,3 +1,8 @@
+*{
+  margin: 0px;
+  padding:0px;
+}
+
 .footer {
    position: relative;
    top:50px;
@@ -6,9 +11,10 @@
    padding-top: 6vh;
    padding-left: 10vw;
    margin-left:0px;
+   margin-right: -0px;
    padding-bottom: 8vh;
    line-height: 2.3em;
-   width: 90%;
+   width: 92%;
    background-color: #2D4150;
    color: #C4C7D3;
    text-align: center;
@@ -37,7 +43,7 @@
    right: 0px;
    top:230px;
    bottom: 0;
-   width: 100%;
+   width: 90%;
    background-color: white;
    color :rgba(0,0,0,.54);
    text-align: center;

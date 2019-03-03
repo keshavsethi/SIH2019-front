@@ -16,7 +16,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 70px;
+  margin: 10px;
   filter:grayscale(0%);
   background-image: url("/home/keshav/Desktop/alertify/images/home _main.jpg");
   background-size: 100% 100%;
@@ -24,7 +24,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   height: 100vh;
-  width: 100%;
+  width: 100s%;
 }
 
 

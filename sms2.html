@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/home/keshav/Desktop/alertify/assets/header.css">
+    </link>
+
+
+
+    <style>
+.container{
+  top:500px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+  background: #456;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* The triangle form is achieved by a CSS hack */
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #28d;
+}
+
+.login-header {
+  background: #28d;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+  padding: 12px;
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+/* Text fields' focus effect */
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+  border-color: #888;
+}
+
+.login input[type="submit"] {
+  background: #28d;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  background: #17c;
+}
+
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+  border-color: #05a;
+}
+
+
+      </style>
+    </head>
+    <body>
+
+    <!-- nav bar-->
+    <div id="extra">
+      <ul id="navbar1" class="navbar">
+    	<li id="home" class="btn img border-right">
+    		<a href="/home/keshav/Desktop/alertify/home/home.html">
+    			<span class="img">
+    				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    					<path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 16 2.59375 L 15.28125 3.28125 L 2.28125 16.28125 L 3.71875 17.71875 L 5 16.4375 L 5 27 L 5 28 L 6 28 L 13 28 L 14 28 L 14 27 L 14 18 L 18 18 L 18 27 L 18 28 L 19 28 L 26 28 L 27 28 L 27 27 L 27 16.4375 L 28.28125 17.71875 L 29.71875 16.28125 L 16.71875 3.28125 L 16 2.59375 z M 16 5.4375 L 25 14.4375 L 25 26 L 20 26 L 20 17 L 20 16 L 19 16 L 13 16 L 12 16 L 12 17 L 12 26 L 7 26 L 7 14.4375 L 16 5.4375 z" color="#000" overflow="visible" font-family="Bitstream Vera Sans"/>
+    				</svg>
+    			</span>
+    			<div class="arrow"></div>
+    		</a>
+    	</li>
+    	<li id="btn1" class="btn text border-right">
+    		<a href="/home/keshav/Desktop/alertify/prediction_data/data.html">
+    			<span class="title">DATA</span>
+    			<div class="arrow"></div>
+    		</a>
+    	</li>
+    	<li id="btn2" class="btn text border-right">
+    		<a href="/home/keshav/Desktop/alertify/news/news.html">
+    			<span class="title">NEWS</span>
+    			<div class="arrow"></div>
+    		</a>
+    	</li>
+    	<li id="btn3" class="btn text border-right">
+    		<a href="/home/keshav/Desktop/alertify/sms/sms.html">
+    			<span class="title">SMS</span>
+    			<div class="arrow"></div>
+    		</a>
+    	</li>
+    	<li id="btn4" class="btn text border-right">
+    		<a href="/home/keshav/Desktop/alertify/unsafe/unsafe.html">
+    			<span class="title">UNSAFE</span>
+    			<div class="arrow"></div>
+    		</a>
+    	</li>
+    	<li id="btn5" class="btn text">
+    		<a href="/home/keshav/Desktop/alertify/food/food.html">
+    			<span class="title">FOODS</span>
+    			<div class="arrow"></div>
+    		</a>
+    	</li>
+    </ul>
+    </div>
+
+    <!-- navbar -->
+
+
+
+
+
+    <div class="login">
+      <div class="login-triangle"></div>
+
+      <h2 class="login-header">Log in</h2>
+
+      <form class="login-container">
+        <p><input id="phone" type="text" placeholder="sms"></p>
+        <p><textarea id="sms_body" name="name" rows="8" cols="80" type="text" ></textarea></p>
+        <p><input type="submit" onclick="smsfunc()" value="submit"></p>
+      </form>
+    </div>
+
+
+    <script>
+      console.log("working");
+      function smsfunc(){
+      fetch("http://192.168.43.155:8080/main/send_sms/", {
+        method: "POST", // *GET, POST, PUT, DELETE, etc.
+        headers: {
+          "Content-Type": "application/json",
+          "X-USER-ID": "583993af-9cc9-4576-b005-c44ba1004715"
+        },
+        body: JSON.stringify({
+          "phone":document.getElementById("phone").value,
+          "sms-body":document.getElementById("sms_body").value
+
+        }) // body data type must match "Content-Type" header
+      })
+        .then(response => response.json())
+        .then(console.log);}
+    </script>
+  </body>
+</html>

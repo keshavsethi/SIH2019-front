@@ -15,8 +15,16 @@
   <!-- css header -->
 
   <!--  css  data -->
+  <!-- <link rel="stylesheet" href="/home/keshav/Desktop/alertify/assets/header.css"> -->
     <link rel="stylesheet" href="/home/keshav/Desktop/alertify/prediction_data/data.css">
   <!--  css data -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> -->
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.css'>
+
+
 
 </head>
 
@@ -28,7 +36,7 @@
 <div id="extra">
   <ul id="navbar1" class="navbar">
 	<li id="home" class="btn img border-right">
-		<a href="#">
+		<a href="/home/keshav/Desktop/alertify/home/home.html">
 			<span class="img">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 					<path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 16 2.59375 L 15.28125 3.28125 L 2.28125 16.28125 L 3.71875 17.71875 L 5 16.4375 L 5 27 L 5 28 L 6 28 L 13 28 L 14 28 L 14 27 L 14 18 L 18 18 L 18 27 L 18 28 L 19 28 L 26 28 L 27 28 L 27 27 L 27 16.4375 L 28.28125 17.71875 L 29.71875 16.28125 L 16.71875 3.28125 L 16 2.59375 z M 16 5.4375 L 25 14.4375 L 25 26 L 20 26 L 20 17 L 20 16 L 19 16 L 13 16 L 12 16 L 12 17 L 12 26 L 7 26 L 7 14.4375 L 16 5.4375 z" color="#000" overflow="visible" font-family="Bitstream Vera Sans"/>
@@ -38,7 +46,7 @@
 		</a>
 	</li>
 	<li id="btn1" class="btn text border-right">
-		<a href="#">
+		<a href="/home/keshav/Desktop/alertify/prediction_data/data.html">
 			<span class="title">DATA</span>
 			<div class="arrow"></div>
 		</a>
@@ -50,7 +58,7 @@
 		</a>
 	</li>
 	<li id="btn3" class="btn text border-right">
-		<a href="#">
+		<a href="/home/keshav/Desktop/alertify/sms/sms.html">
 			<span class="title">SMS</span>
 			<div class="arrow"></div>
 		</a>
@@ -62,7 +70,7 @@
 		</a>
 	</li>
 	<li id="btn5" class="btn text">
-		<a href="#">
+		<a href="/home/keshav/Desktop/alertify/food/food.html">
 			<span class="title">FOODS</span>
 			<div class="arrow"></div>
 		</a>
@@ -77,13 +85,68 @@
 
 
 <!--  heat maps  -->
+
+<h1 class="map_data" ><a href="#modal1" style="color:white;"> Earthquakes in Realtime</a></h1>
+<!-- <div id="modal1" class="modal">
+   <div class="modal-content">
+     <h4>Modal Header</h4>
+     <p>A bunch of text</p>
+   </div>
+   <div class="modal-footer">
+     <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+   </div>
+ </div> -->
 <iframe class="frame" src="/home/keshav/Desktop/alertify/heatmaps/map_data.html"></iframe>
+<h1 class="tsunami_realtime">Tsunami Magnitude Heat Maps</h1>
 <iframe class="frame_tsunami" src="/home/keshav/Desktop/alertify/heatmaps/tsunami_realtime.html"></iframe>
 <!-- heat maps  -->
 
 
 
-<!-- main code  -->
+
+
+<!-- calculator thing-->
+<div class="form_thing">
+<form class="form_1">
+<h1 style="height:100px; font-size:30px;">DISTANCE CALCULATOR</h1>
+<input placeholder="Depth of sea in meters " type="text"  id="depth" value="" required>
+<input placeholder="magnitude of earthquake" type="text" value="" id="mag" required>
+<button id="send" onclick="sendfunc()">Send</button>
+</form>
+<p id="ans" style="top:10px;">answe </p>
+</div>
+<!--calculator thing -->
+
+
+<!--div for historical data-->
+<div class="container">
+  <h1>Check Earthquakes</h1>
+  <form action="action_page.php" class='form-inline'>
+    <div class='form-group'>
+      <label for='startDate'>Start Date:</label>
+      <input type="date" id="startDate" name="startDate" class='form-control'>
+    </div>
+    <div class='form-group'>
+      <label for='endDate'>End Date:</label>
+      <input type="date" id="endDate" name="endDate" class='form-control'>
+    </div>
+    <button id='getGeoData' class="btn btn-info" type='button'>Get Seismic Data</button>
+  </form>
+  <center><span id='loading'>FETCHING USGS DATA</span>
+    <div id="map"></div>
+  </center> `````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+  <ul id='display' class="list-group"></ul>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.js'></script>
+<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDaHSU38gac_8IGrMeKTlaaQmfexIXS4Bw'></script>
+<script  src="/home/keshav/Desktop/alertify/prediction_data/data.js"></script>
+<!--  div for historical data-->
+
+
+
+
 
 
 </body>
